@@ -6,7 +6,8 @@ import AboutUs from "./components/Aboutus";
 import EventList from "./components/EventList";
 import EventSection from "./components/EventSection";
 import RegistrationPage from "./components/RegistrationPage";
-
+import ContactUs from "./components/ContactUs"
+import Footer from "./components/Footer"
 const App = () => {
   return (
     <Router>
@@ -21,7 +22,9 @@ const App = () => {
           {/* Event Details Page */}
           <Route path="/register" element={<RegistrationPage />} />{" "}
           {/* Registration Form */}
+          <Route path="/contactus" element={<ContactUs />} />{" "}
         </Routes>
+        <Footer/>
       </div>
     </Router>
   );

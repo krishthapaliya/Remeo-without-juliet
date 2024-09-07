@@ -3,10 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer
-      className="text-white py-8"
-      style={{
-        background: 'linear-gradient(90deg, #997676, #C09C9C)',
-      }}
+      className=" py-8 bg-[#e0f0fe] text-gray-500"
     >
       {/* Container to center the content */}
       <div className="container mx-auto flex flex-col items-center space-y-12">
@@ -16,9 +13,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Our Organization</h3>
             <ul className="space-y-2">
-              <li><a href="/about" className="hover:underline">About Us</a></li>
-              <li><a href="/blogs" className="hover:underline">Blogs</a></li>
-              <li><a href="/programs" className="hover:underline">Our Program</a></li>
+              <li><a href="/about" className="hover:bg-[#7AC142] hover:text-white transition-color px-2 py-1 rounded-full">About Us</a></li>
+              <li><a href="/blogs" className="hover:bg-[#7AC142] hover:text-white transition-color px-2 py-1 rounded-full">Blogs</a></li>
+              <li><a href="/programs" className="hover:bg-[#7AC142] hover:text-white transition-color px-2 py-1 rounded-full">Our Program</a></li>
             </ul>
           </div>
 
@@ -26,12 +23,14 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-2">
-              <li><a href="/contact" className="hover:underline">Contact Us</a></li>
-              <li><a href="/help" className="hover:underline">Help</a></li>
-              <li><a href="/location" className="hover:underline">Our Location</a></li>
+              <li><a href="/contact" className="hover:bg-[#7AC142] hover:text-white transition-color px-2 py-1 rounded-full">Contact Us</a></li>
+              <li><a href="/help" className="hover:bg-[#7AC142] hover:text-white transition-color px-2 py-1 rounded-full">Help</a></li>
+              <li><a href="/location" className="hover:bg-[#7AC142] hover:text-white transition-color px-2 py-1 rounded-full">Our Location</a></li>
             </ul>
           </div>
         </div>
+
+        
 
         {/* Bottom Section */}
         <div className="mt-8 text-center border-t border-gray-700 pt-4 w-full">

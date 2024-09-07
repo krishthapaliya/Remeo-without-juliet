@@ -6,34 +6,35 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="flex items-center justify-between shadow-black p-4 bg-[#F0F8FF] text-black px-20 py-4">
+    <div className="flex items-center justify-between shadow shadow-yellow-50  bg-[#e0f0fe] text-black px-8 py-0.5">
+
       <div className="flex items-center">
         <Link to="/">
-          <img src={logo} alt="logo" className="h-10 md:h-12" />
+          <img src={logo} alt="logo" className="h-10 md:h-28" />
         </Link>
       </div>
-      <div className="hidden md:flex gap-8 space-x-6">
+      <div className="hidden md:flex space-x-16">
         <Link
           to="/"
-          className="hover:text-slate-800 transition-colors hover:scale-110 hover:font-bold"
+          className="hover:bg-[#7AC142] hover:text-white transition-color px-2 py-1 rounded-full text-base font-semibold text-gray-500"
         >
           Home
         </Link>
         <Link
           to="/aboutus"
-          className="hover:text-slate-800 transition-colors hover:scale-110 hover:font-bold"
+          className="hover:bg-[#7AC142] hover:text-white transition-color px-2 py-1 rounded-full text-base font-semibold text-gray-500"
         >
           About Us
         </Link>
         <Link
           to="/eventlist"
-          className="hover:text-slate-800 transition-colors hover:scale-110 hover:font-bold"
+          className="hover:bg-[#7AC142] hover:text-white transition-color px-2 py-1 rounded-full text-base font-semibold text-gray-500"
         >
           EventList
         </Link>
         <Link
           to="/contactus"
-          className="hover:text-slate-800 transition-colors hover:scale-110 hover:font-bold"
+          className="hover:bg-[#7AC142] hover:text-white transition-color px-2 py-1 rounded-full text-base font-semibold text-gray-500"
         >
           Contact Us
         </Link>

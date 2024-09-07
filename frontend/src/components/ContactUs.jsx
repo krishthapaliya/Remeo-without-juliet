@@ -6,7 +6,7 @@ const ContactForm = () => {
     <div>
       {/* "Contact Us" section with gradient and background image */}
       <div
-        className="p-8 text-white flex justify-center items-center h-72 relative"
+        className="p-8 text-white flex justify-center items-center h-96 relative"
         style={{
           backgroundImage: `linear-gradient(to right, rgba(128, 90, 213, 0.8), rgba(128, 90, 213, 0.5)), url(${backgroundImage})`,
           backgroundSize: 'contain',
@@ -32,42 +32,78 @@ const ContactForm = () => {
             </ul>
           </div>
 
-          <form className="space-y-4">
-            <div className="flex space-x-4">
-              <input
-                type="text"
-                placeholder="First Name"
-                className="border border-gray-300 p-3 rounded-lg w-1/2"
-              />
-              <input
-                type="text"
-                placeholder="Last Name"
-                className="border border-gray-300 p-3 rounded-lg w-1/2"
-              />
-            </div>
-            <input
-              type="text"
-              placeholder="Company Name"
-              className="border border-gray-300 p-3 rounded-lg w-full"
-            />
-            <input
-              type="email"
-              placeholder="Company Email"
-              className="border border-gray-300 p-3 rounded-lg w-full"
-            />
-            <input
-              type="text"
-              placeholder="Job Title"
-              className="border border-gray-300 p-3 rounded-lg w-full"
-            />
+          <div className="w-full lg:w-2/3">
+            <form>
+              <div className="mb-4">
+                <label
+                  htmlFor="fullName"
+                  className="block text-sm font-semibold"
+                >
+                  Full Name*
+                </label>
+                <input
+                  type="text"
+                  id="fullName"
+                  className="w-full mt-2 p-2 border border-gray-300 rounded"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="email" className="block text-sm font-semibold">
+                  Email*
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  className="w-full mt-2 p-2 border border-gray-300 rounded"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="phone" className="block text-sm font-semibold">
+                  Phone Number
+                </label>
+                <input
+                  type="text"
+                  id="phone"
+                  className="w-full mt-2 p-2 border border-gray-300 rounded"
+                />
+              </div>
+              <div className="mb-4">
+                <label
+                  htmlFor="address"
+                  className="block text-sm font-semibold"
+                >
+                  Address
+                </label>
+                <input
+                  type="text"
+                  id="address"
+                  className="w-full mt-2 p-2 border border-gray-300 rounded"
+                />
+              </div>
+              <div className="mb-4">
+                <label
+                  htmlFor="description"
+                  className="block text-sm font-semibold"
+                >
+                  Description*
+                </label>
+                <textarea
+                  id="description"
+                  className="w-full mt-2 p-2 border border-gray-300 rounded h-24"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800"
+              >
+                Send
+              </button>
+            </form>
+          </div>
 
-            <button
-              type="submit"
-              className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300"
-            >
-              Request a Demo
-            </button>
-          </form>
         </div>
       </div>
     </div>

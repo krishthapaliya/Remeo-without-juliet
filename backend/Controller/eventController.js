@@ -14,14 +14,7 @@ exports.createEvent = async (req, res) => {
       imageUrl = ""; // No image provided
     }
 
-    const {
-      title,
-      description,
-      location,
-      startDate,
-      deadlineDate,
-      eventStatus,
-    } = req.body;
+    const { title, description, location, startDate, deadlineDate } = req.body;
     if (!title || !description || !location || !startDate || !startDate) {
       return res.status(400).json({
         message: "Missing required fields",
@@ -36,7 +29,6 @@ exports.createEvent = async (req, res) => {
       eventLocation: location,
       startDate,
       deadlineDate,
-      eventStatus,
     });
 
     res.status(200).json({

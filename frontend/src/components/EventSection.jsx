@@ -1,12 +1,20 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import { format } from "date-fns"; // Correct import for format
 
 const EventSection = () => {
   const { id } = useParams(); // Get the event ID from URL
   console.log("id", id);
   const [eventData, setEventData] = useState({});
   const [loading, setLoading] = useState(false);
+
+  // Convert string dates to Date objects if they exist
+  const startDate = eventData?.startDate ? new Date(eventData.startDate) : null;
+  const deadlineDate = eventData?.deadlineDate
+    ? new Date(eventData.deadlineDate)
+    : null;
+
   console.log("eventData", eventData);
   const fetchEvent = async () => {
     setLoading(true);
@@ -24,22 +32,28 @@ const EventSection = () => {
   useEffect(() => {
     fetchEvent();
   }, []);
+  // Helper function to format dates
+  const formatDate = (date) => {
+    if (!date || isNaN(date.getTime())) return "Date not available";
+    return format(date, "MMM d, yyyy");
+  };
 
   return (
     <div className="w-full flex justify-center my-[5%]">
       <div className="flex flex-col w-[80%] bg-gray-100 shadow-md p-5">
         <div className="flex gap-5">
-          <div className="w-[300px] h-300px]">
-            <img src={eventData?.eventImage} alt="" />{" "}
+          <div className="w-[300px] h-300px] ">
+            <img src={eventData?.eventImage} alt="" className="rounded-md" />{" "}
           </div>
           <div className="p-6">
             <h3 className="text-xl font-bold text-gray-800 mb-2">
               {eventData?.eventTitle}
             </h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 ">
               location :{eventData?.eventLocation}
             </p>
-            <p>Start Date:{eventData?.startDate}</p>
+            <p>Start Date: {formatDate(startDate)}</p>
+            <p>Deadline Date: {formatDate(deadlineDate)}</p>
           </div>
         </div>
         <div>{eventData?.eventDescription}</div>

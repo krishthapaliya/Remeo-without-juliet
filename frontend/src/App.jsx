@@ -8,6 +8,7 @@ import EventSection from "./components/EventSection";
 import RegistrationPage from "./components/RegistrationPage";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
+import CreateEvent from "./components/Createevent";
 const App = () => {
   return (
     <Router>
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/register" element={<RegistrationPage />} />{" "}
         {/* Registration Form */}
         <Route path="/contactus" element={<ContactUs />} />{" "}
+        <Route path="/createEvent" element={<CreateEvent />} />{" "}
       </Routes>
       <Footer />
     </Router>

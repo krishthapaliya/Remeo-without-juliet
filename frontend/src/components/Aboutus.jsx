@@ -8,7 +8,7 @@ import our from "../assets/our.jpg";
 
 const AboutUs = () => {
   return (
-    <div className="relative bg-green-50 pb-16 px-6 md:px-12 lg:px-24 p-10">
+    <div className="relative bg-blue-50 pb-16 px-6 md:px-12 lg:px-24 p-10">
       {/* Main Title */}
       <h2 className="text-4xl lg:text-5xl text-center font-extrabold text-gray-800 mb-10">
         About Us
@@ -95,7 +95,7 @@ const AboutUs = () => {
               />
             </div>
             <div className="bg-green-100 rounded-tr-[56px] rounded-bl-[56px] px-10 py-10 text-sm h-[296px] w-[210px] shadow-xl border border-green-300 hover:shadow-2xl transition-shadow duration-300">
-              <p className="text-gray-600 mb-4">{value.desc}</p>
+              <p className="text-black mb-4">{value.desc}</p>
               <h3 className="font-bold text-gray-800">{value.title}</h3>
             </div>
           </div>

@@ -27,10 +27,6 @@ const eventSchema = new Schema(
       type: Date,
       required: [true, "Deadline Date must be provided"],
     },
-    eventStatus: {
-      type: Boolean,
-      default: false, // Default value for eventStatus
-    },
   },
   {
     timestamps: true,

@@ -47,68 +47,6 @@ const RegistrationPage = () => {
     }
   };
 
-  // console.log("formData", formData);
-
-  // const [loading, setLoading] = useState(false);
-
-  // const notifySuccess = (message) => toast.success(message);
-  // const notifyError = (message) => toast.error(message);
-
-  // const handleInputChange = (e) => {
-  //   const { name, value, files } = e.target;
-  //   if (name === "image") {
-  //     setFormData({ ...formData, image: files[0] });
-  //   } else {
-  //     setFormData({ ...formData, [name]: value });
-  //   }
-  // };
-
-  // const uploadImageToCloudinary = async (file) => {
-  //   const formData = new FormData();
-  //   formData.append("file", file);
-  //   formData.append("upload_preset", cloudinaryUploadPreset);
-
-  //   try {
-  //     const response = await axios.post(
-  //       "https://api.cloudinary.com/v1_1/deqtran8y/image/upload", // Replace with your Cloudinary cloud name
-  //       formData
-  //     );
-  //     return response.data.secure_url; // Return the URL of the uploaded image
-  //   } catch (error) {
-  //     notifyError("Image upload failed");
-  //     throw error;
-  //   }
-  // };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-
-  //   try {
-  //     let imageUrl = "";
-  //     if (formData.image) {
-  //       imageUrl = await uploadImageToCloudinary(formData.image);
-  //     }
-
-  //     const dataToSend = {
-  //       ...formData,
-  //       imageUrl,
-  //     };
-
-  //     // Replace with your API endpoint
-  //     const response = await axios.post(
-  //       "http://localhost:4000/api/event",
-  //       dataToSend
-  //     );
-
-  //     notifySuccess(response.data.message);
-  //   } catch (error) {
-  //     notifyError("Failed to submit form");
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
-
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-100 to-blue-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl w-full space-y-8 bg-white p-8 rounded-xl shadow-lg">

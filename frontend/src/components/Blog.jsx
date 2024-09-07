@@ -121,7 +121,7 @@ const Blog = () => {
   return (
     <div className="App">
       <header className="text-center py-8">
-        <h1 className="text-4xl font-bold text-blue-500">Blog</h1>
+        <h1 className="text-4xl font-bold text-green-500">Blog</h1>
       </header>
       <main>
         <BlogList posts={posts} />

@@ -20,7 +20,7 @@ const ContactForm = () => {
       </div>
 
       {/* Contact Form Section */}
-      <div className="bg-gray-50 py-8 lg:py-12 xl:py-16 px-4 lg:px-8 xl:px-16 rounded-md shadow-md">
+      <div className="bg-[F0F8FF] py-8 lg:py-12 xl:py-16 px-4 lg:px-8 xl:px-16 rounded-md shadow-md">
         <div className="flex flex-col lg:flex-row justify-between">
           <div className="w-full lg:w-1/3 mb-8 lg:mb-0">
             <h2 className="text-xl lg:text-2xl font-bold mb-4">

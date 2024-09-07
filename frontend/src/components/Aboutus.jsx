@@ -10,58 +10,12 @@ const AboutUs = () => {
   return (
     <div className="relative bg-blue-50 pb-16 px-6 md:px-12 lg:px-24 p-10">
       {/* Main Title */}
-      <h2 className="text-4xl lg:text-5xl text-center font-extrabold text-gray-800 mb-10">
-        About Us
-      </h2>
+     
 
       <div className="container mx-auto py-12">
-        {/* Mission and Vision Section */}
-        <div className="grid rounded-xl px-6 sm:px-10 sm:pt-12 grid-cols-1 md:grid-cols-2 gap-8 my-10">
-          {/* Mission Section */}
-          <div className="text-center rounded-xl bg-green-100 pr-6 sm:pr-32 pl-6 sm:pl-10 py-6 md:text-left">
-            <h3 className="text-4xl sm:text-5xl font-bold text-gray-800 my-4 sm:my-6">
-              Our Mission
-            </h3>
-            <p className="text-lg sm:text-xl text-gray-600 my-4 sm:my-6">
-              To create a world where everyone has the opportunity to contribute
-              to the well-being of their community through meaningful volunteer
-              work.
-            </p>
-          </div>
-
-          {/* Mission Image */}
-          <div className="flex justify-center md:justify-end">
-            <img
-              src={our}
-              alt="Mission Image"
-              className="w-full max-w-xs sm:max-w-md rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
-            />
-          </div>
-        </div>
-
-        <div className="grid rounded-xl px-6 py-8 sm:px-10 sm:py-12 grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Vision Image */}
-          <div className="flex justify-center md:justify-start">
-            <img
-              src={ourmission}
-              alt="Vision Image"
-              className="w-full max-w-xs sm:max-w-md rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
-            />
-          </div>
-
-          {/* Vision Text */}
-          <div className="text-center rounded-xl bg-green-100 pr-6 sm:pr-32 pl-6 sm:pl-10 py-6 md:text-left">
-            <h3 className="text-4xl sm:text-5xl font-bold text-gray-800 my-4 sm:my-6">
-              Our Vision
-            </h3>
-            <p className="text-lg sm:text-xl text-gray-600 my-4 sm:my-6">
-              A future where every individual feels empowered to make a positive
-              impact through volunteerism and acts of kindness.
-            </p>
-          </div>
-        </div>
-      </div>
-
+      <h2 className="text-4xl lg:text-5xl text-center font-semibold text-[#0bbcfe] mb-10">
+        About Us
+      </h2>
       {/* Core Values Cards */}
       <div className="relative flex flex-wrap justify-center gap-16 mx-auto space-y-12 lg:space-y-0 lg:space-x-8 px-4 lg:px-0 mt-12">
         {[
@@ -94,17 +48,64 @@ const AboutUs = () => {
                 className="absolute rounded-full top-[110px] left-1 transform -translate-x-1/2 -translate-y-1/2 object-cover shadow-lg"
               />
             </div>
-            <div className="bg-green-100 rounded-tr-[56px] rounded-bl-[56px] px-10 py-10 text-sm h-[296px] w-[210px] shadow-xl border border-green-300 hover:shadow-2xl transition-shadow duration-300">
-              <p className="text-black mb-4">{value.desc}</p>
-              <h3 className="font-bold text-gray-800">{value.title}</h3>
+            <div className="bg-[#019bd5] rounded-tr-[56px] rounded-bl-[56px] px-10 py-10 text-sm h-[296px] w-[210px] shadow-xl border border-[#01e9ee] hover:shadow-2xl transition-shadow duration-300">
+              <p className="text-white mb-4">{value.desc}</p>
+              <h3 className="font-bold text-white">{value.title}</h3>
             </div>
           </div>
         ))}
       </div>
+        {/* Mission and Vision Section */}
+        <div className="grid rounded-xl px-6 sm:px-10 sm:pt-12 grid-cols-1 md:grid-cols-2 gap-8 my-10">
+          {/* Mission Section */}
+          <div className="text-center rounded-xl bg-[#01AEEE] pr-6 sm:pr-32 pl-6 sm:pl-10 py-6 md:text-left border-[#01e9ee] hover:shadow-2xl">
+            <h3 className="text-4xl sm:text-5xl  text-white my-4 sm:my-6 font-semibold ">
+              Our Mission
+            </h3>
+            <p className="text-lg sm:text-xl text-white my-4 sm:my-6">
+              To create a world where everyone has the opportunity to contribute
+              to the well-being of their community through meaningful volunteer
+              work.
+            </p>
+          </div>
+
+          {/* Mission Image */}
+          <div className="flex justify-center md:justify-end">
+            <img
+              src={our}
+              alt="Mission Image"
+              className="w-full max-w-xs sm:max-w-md rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
+            />
+          </div>
+        </div>
+
+        <div className="grid rounded-xl px-6 py-8 sm:px-10 sm:py-12 grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Vision Image */}
+          <div className="flex justify-center md:justify-start">
+            <img
+              src={ourmission}
+              alt="Vision Image"
+              className="w-full max-w-xs sm:max-w-md rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
+            />
+          </div>
+
+          {/* Vision Text */}
+          <div className="text-center rounded-xl bg-[# F3FF90] pr-6 sm:pr-32 pl-6 sm:pl-10 py-6 md:text-left bg-green-600 border-[#01e9ee] hover:shadow-2xl">
+            <h3 className="text-4xl sm:text-5xl text-white my-4 sm:my-6 font-semibold">
+              Our Vision
+            </h3>
+            <p className="text-lg sm:text-xl text-white my-4 sm:my-6">
+              A future where every individual feels empowered to make a positive
+              impact through volunteerism and acts of kindness.
+            </p>
+          </div>
+        </div>
+      </div>
+     
 
       {/* Testimonials */}
       <div className="mt-12 bg-white py-8 px-4 mx-20 rounded-lg shadow-xl border border-gray-300">
-        <h3 className="text-2xl text-center font-bold text-green-600 mb-6">
+        <h3 className="text-2xl text-center font-bold text-gray-600 mb-6">
           What Volunteers Say
         </h3>
         <div className="flex flex-col lg:flex-row lg:space-x-8">
@@ -130,7 +131,7 @@ const AboutUs = () => {
 
       {/* Impact Section */}
       <div className="text-center mt-8 mx-20 pb-20 bg-white py-8 px-4 rounded-lg shadow-xl border border-gray-300">
-        <h3 className="text-xl font-bold text-gray-800">Our Impact</h3>
+        <h3 className="text-xl font-bold text-gray-600">Our Impact</h3>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
           {[
             { stat: "500+", desc: "Volunteers Engaged" },
@@ -147,7 +148,7 @@ const AboutUs = () => {
 
       {/* Call to Action */}
       <div className="text-center mt-12">
-        <h3 className="text-2xl font-bold text-gray-800">
+        <h3 className="text-2xl font-bold text-gray-600">
           Join Us in Making a Difference
         </h3>
         <p className="text-gray-600 mt-4">

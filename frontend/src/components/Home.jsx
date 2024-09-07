@@ -5,7 +5,7 @@ import Blog from './Blog'
 
 const Home = () => {
   return (
-    <div className='m-0.5'>
+    <div className='m-0.5 bg-blue-50'>
         <Herosection/>
         <AboutUs />
         <Blog />

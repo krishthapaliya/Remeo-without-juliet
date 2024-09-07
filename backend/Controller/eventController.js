@@ -138,3 +138,40 @@ exports.getSingleEvent = async (req, res) => {
     });
   }
 };
+
+exports.searchEvents = async (req, res) => {
+  try {
+    const { location, title } = req.query; // Get search parameters from query
+
+    // Build the query object
+    const query = {};
+
+    if (location) {
+      query.eventLocation = { $regex: location, $options: "i" }; // Case-insensitive search for location
+    }
+
+    if (title) {
+      query.eventTitle = { $regex: title, $options: "i" }; // Case-insensitive search for title
+    }
+
+    // Fetch events based on the query
+    const events = await eventSchema.find(query);
+
+    if (events.length > 0) {
+      res.status(200).json({
+        message: "Events fetched successfully",
+        data: events,
+      });
+    } else {
+      res.status(404).json({
+        message: "No events found matching the criteria",
+      });
+    }
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).json({
+      message: "Error fetching events",
+      error: error.message,
+    });
+  }
+};

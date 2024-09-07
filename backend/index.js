@@ -22,8 +22,10 @@ connectDatabase(process.env.MONGO_URL);
 
 //Routes/API
 const eventRoutes = require("./Router/eventRouter");
+const userRoutes = require("./Router/userRouter");
 
 app.use("/api", eventRoutes);
+app.use("/api", userRoutes);
 
 // Define a route
 app.get("/", (req, res) => {

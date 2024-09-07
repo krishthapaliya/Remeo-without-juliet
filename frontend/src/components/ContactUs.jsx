@@ -1,17 +1,16 @@
-import React from 'react';
-import backgroundImage from '../assets/bgimg.jpg'; // Adjust the path as needed
-
+import React from "react";
+import backgroundImage from "../assets/bgimg.jpg"; // Adjust the path as needed
 
 const ContactForm = () => {
   return (
-    <div className='mx-24'>
+    <div className="mx-24">
       {/* "Contact Us" section with gradient and background image */}
       <div
         className="p-8 text-white flex justify-center items-center h-96 relative"
         style={{
           backgroundImage: `linear-gradient(to right, rgba(128, 90, 213, 0.8), rgba(128, 90, 213, 0.5)), url(${backgroundImage})`,
-          backgroundSize: 'contain',
-          backgroundPosition: 'center',
+          backgroundSize: "contain",
+          backgroundPosition: "center",
         }}
       >
         <div className="text-center z-10">
@@ -20,7 +19,6 @@ const ContactForm = () => {
         </div>
       </div>
 
-     
       <div className="bg-gray-50 py-8 lg:py-12 xl:py-16 px-4 lg:px-8 xl:px-16  rounded-md shadow-md">
         <div className="flex flex-col lg:flex-row justify-between">
           <div className="w-full lg:w-1/3 mb-8 lg:mb-0">
@@ -100,7 +98,21 @@ const ContactForm = () => {
                   htmlFor="fullName"
                   className="block text-sm font-semibold"
                 >
-                  Full Name*
+                  First Name
+                </label>
+                <input
+                  type="text"
+                  id="fullName"
+                  className="w-full mt-2 p-2 border border-gray-300 rounded"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label
+                  htmlFor="fullName"
+                  className="block text-sm font-semibold"
+                >
+                  Last Name
                 </label>
                 <input
                   type="text"
@@ -111,11 +123,22 @@ const ContactForm = () => {
               </div>
               <div className="mb-4">
                 <label htmlFor="email" className="block text-sm font-semibold">
-                  Email*
+                  Email
                 </label>
                 <input
                   type="email"
                   id="email"
+                  className="w-full mt-2 p-2 border border-gray-300 rounded"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="email" className="block text-sm font-semibold">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  id="password"
                   className="w-full mt-2 p-2 border border-gray-300 rounded"
                   required
                 />
@@ -166,7 +189,6 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 };

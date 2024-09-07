@@ -6,12 +6,8 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-<<<<<<< HEAD
-    <div className="flex items-center justify-between  p-4 bg-[#F0F8FF] text-black px-20 py-4 ">
-=======
     <div className="flex items-center justify-between shadow shadow-yellow-50  bg-[#e0f0fe] text-black px-8 py-0.5">
 
->>>>>>> 425b77e5175c893acb697063244cd165cf2febe1
       <div className="flex items-center">
         <Link to="/">
           <img src={logo} alt="logo" className="h-10 md:h-28" />
@@ -20,42 +16,25 @@ const Navbar = () => {
       <div className="hidden md:flex space-x-16">
         <Link
           to="/"
-<<<<<<< HEAD
-          className="hover:bg-blue-500 hover:text-white transition-colors  px-2 py-1 rounded-full text-base font-semibold text-gray-500"
-=======
           className="hover:bg-[#7AC142] hover:text-white transition-color px-2 py-1 rounded-full text-base font-semibold text-gray-500"
->>>>>>> 425b77e5175c893acb697063244cd165cf2febe1
         >
           HOME
         </Link>
         <Link
           to="/aboutus"
-<<<<<<< HEAD
-          className="hover:bg-blue-500 hover:text-white transition-colors  px-2 py-1 rounded-full text-base font-semibold text-gray-500"
-=======
           className="hover:bg-[#7AC142] hover:text-white transition-color px-2 py-1 rounded-full text-base font-semibold text-gray-500"
->>>>>>> 425b77e5175c893acb697063244cd165cf2febe1
         >
           ABOUT US
         </Link>
         <Link
-<<<<<<< HEAD
           to="/event"
-          className="hover:bg-blue-500 hover:text-white transition-colors  px-2 py-1 rounded-full text-base font-semibold text-gray-500"
-=======
-          to="/eventlist"
           className="hover:bg-[#7AC142] hover:text-white transition-color px-2 py-1 rounded-full text-base font-semibold text-gray-500"
->>>>>>> 425b77e5175c893acb697063244cd165cf2febe1
         >
           EVENT LIST
         </Link>
         <Link
           to="/contactus"
-<<<<<<< HEAD
-          className="hover:bg-blue-500 hover:text-white transition-colors  px-2 py-1 rounded-full text-base font-semibold text-gray-500"
-=======
           className="hover:bg-[#7AC142] hover:text-white transition-color px-2 py-1 rounded-full text-base font-semibold text-gray-500"
->>>>>>> 425b77e5175c893acb697063244cd165cf2febe1
         >
           CONTACT US
         </Link>

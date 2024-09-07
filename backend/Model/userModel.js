@@ -11,7 +11,7 @@ const userSchema = new Schema({
     required: [true, "Lastname must be provided"],
   },
   contactNumber: {
-    type: Number,
+    type: String,
     required: [true, "Contact number must be provided"],
   },
   email: {
@@ -24,9 +24,9 @@ const userSchema = new Schema({
   },
   participationType: {
     type: String,
-    enum: ["Attendes", "Volunter"],
-    default: ["Volunter"],
-    required: true, // Optional: Add if you want the field to be mandatory
+    enum: ["volunteer", "attendee"],
+    default: ["volunteer"],
+    required: false, // Optional: Add if you want the field to be mandatory
   },
 });
 module.exports = mongoose.model("userSchema", userSchema);

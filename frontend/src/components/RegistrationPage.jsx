@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 const RegistrationPage = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +19,29 @@ const RegistrationPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted: ", formData);
+
+    // EmailJS Service
+    const serviceID = "service_lol0k0a"; // Replace with your EmailJS service ID
+    const templateID = "template_1zaie7o"; // Replace with your EmailJS template ID
+    const publicKey = "_aIWDQVms0xGhDsme"; // Replace with your EmailJS public key
+
+    emailjs.send(serviceID, templateID, {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+      address: formData.address,
+      event: formData.event,
+      participationType: formData.participationType,
+    }, publicKey)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert("Registration form successfully submitted via email!");
+      })
+      .catch((error) => {
+        console.log('FAILED...', error);
+        alert("There was an error submitting the form.");
+      });
   };
 
   return (

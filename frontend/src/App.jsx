@@ -1,12 +1,30 @@
-import { useState } from "react";
-import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import AboutUs from "./components/Aboutus";
+import EventList from "./components/EventList";
+import EventSection from "./components/EventSection";
+import RegistrationPage from "./components/RegistrationPage";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} /> {/* Home Route */}
+          <Route path="/aboutus" element={<AboutUs />} /> {/* About Us Page */}
+          <Route path="/eventlist" element={<EventList />} />{" "}
+          {/* List of Events */}
+          <Route path="/event/:id" element={<EventSection />} />{" "}
+          {/* Event Details Page */}
+          <Route path="/register" element={<RegistrationPage />} />{" "}
+          {/* Registration Form */}
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

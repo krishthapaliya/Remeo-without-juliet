@@ -1,7 +1,6 @@
 import React from 'react';
 import backgroundImage from '../assets/bgimg.jpg'; // Adjust the path as needed
 
-
 const ContactForm = () => {
   return (
     <div className='mx-24'>
@@ -20,8 +19,8 @@ const ContactForm = () => {
         </div>
       </div>
 
-     
-      <div className="bg-gray-50 py-8 lg:py-12 xl:py-16 px-4 lg:px-8 xl:px-16  rounded-md shadow-md">
+      {/* Contact Form Section */}
+      <div className="bg-gray-50 py-8 lg:py-12 xl:py-16 px-4 lg:px-8 xl:px-16 rounded-md shadow-md">
         <div className="flex flex-col lg:flex-row justify-between">
           <div className="w-full lg:w-1/3 mb-8 lg:mb-0">
             <h2 className="text-xl lg:text-2xl font-bold mb-4">
@@ -45,7 +44,7 @@ const ContactForm = () => {
                     />
                   </svg>
                 </div>
-                <span className="ml-3 text-lg">080 3931 3338</span>
+                <span className="ml-3 text-lg">9806810999</span>
               </div>
               <div className="flex items-center">
                 <div className="bg-black text-white p-2 rounded-full">
@@ -64,26 +63,33 @@ const ContactForm = () => {
                     />
                   </svg>
                 </div>
-                <span className="ml-3 text-lg">info@pnpintl.com</span>
+                <span className="ml-3 text-lg">info@Sewavolunteering.com</span>
               </div>
               <div className="flex items-center">
                 <div className="bg-black text-white p-2 rounded-full">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5.121 15.121A3.004 3.004 0 004 18v2a1 1 0 001 1h3a1 1 0 001-1v-2a1 1 0 00-1-1h-.879a3.004 3.004 0 01-1.879-.879l-.379-.379a3.004 3.004 0 01-.879-1.879V13a1 1 0 011-1h2a1 1 0 011 1v.879a3.004 3.004 0 01-.879 1.879l-.379.379z"
-                    />
-                  </svg>
+                <svg
+  xmlns="http://www.w3.org/2000/svg"
+  className="h-6 w-6"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke="currentColor"
+>
+  <path
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    d="M12 11c1.104 0 2-.896 2-2s-.896-2-2-2-2 .896-2 2 .896 2 2 2z"
+  />
+  <path
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    d="M21 10c0 7.732-9 13-9 13S3 17.732 3 10a9 9 0 1118 0z"
+  />
+</svg>
+
                 </div>
-                <span className="ml-3 text-lg">St. Mary Island, Tokyo</span>
+                <span className="ml-3 text-lg">khairahani-chitwan, Nepal</span>
               </div>
             </div>
           </div>
@@ -95,23 +101,24 @@ const ContactForm = () => {
               get back to you as soon as possible.
             </p>
             <form>
+              {/* Existing Fields */}
               <div className="mb-4">
                 <label
-                  htmlFor="fullName"
+                  htmlFor="orgName"
                   className="block text-sm font-semibold"
                 >
-                  Full Name*
+                  Organization Name*
                 </label>
                 <input
                   type="text"
-                  id="fullName"
+                  id="orgName"
                   className="w-full mt-2 p-2 border border-gray-300 rounded"
                   required
                 />
               </div>
               <div className="mb-4">
                 <label htmlFor="email" className="block text-sm font-semibold">
-                  Email*
+                  Organization Email*
                 </label>
                 <input
                   type="email"
@@ -122,7 +129,7 @@ const ContactForm = () => {
               </div>
               <div className="mb-4">
                 <label htmlFor="phone" className="block text-sm font-semibold">
-                  Phone Number
+                  Organization Contact
                 </label>
                 <input
                   type="text"
@@ -132,17 +139,102 @@ const ContactForm = () => {
               </div>
               <div className="mb-4">
                 <label
-                  htmlFor="address"
+                  htmlFor="url"
                   className="block text-sm font-semibold"
                 >
-                  Address
+                  Organization URL
                 </label>
                 <input
                   type="text"
-                  id="address"
+                  id="url"
                   className="w-full mt-2 p-2 border border-gray-300 rounded"
                 />
               </div>
+
+              <div className="mb-4">
+                <label
+                  htmlFor="startDate"
+                  className="block text-sm font-semibold"
+                >
+                  Start Date*
+                </label>
+                <input
+                  type="date"
+                  id="startDate"
+                  className="w-full mt-2 p-2 border border-gray-300 rounded"
+                  required
+                />
+               </div> 
+
+               <div className="mb-4">
+                <label
+                  htmlFor="duration"
+                  className="block text-sm font-semibold"
+                >
+                  Duration*
+                </label>
+                <input
+                  type="text"
+                  id="duration"
+                  className="w-full mt-2 p-2 border border-gray-300 rounded"
+                  placeholder="e.g., 2 hours, 1 day"
+                  required
+                />
+              </div>
+
+            
+              {/* New Fields for Action Data and Event Image */}
+              <div className="mb-4">
+                <label
+                  htmlFor="action"
+                  className="block text-sm font-semibold"
+                >
+                  Action Data*
+                </label>
+                <select
+                  id="action"
+                  className="w-full mt-2 p-2 border border-gray-300 rounded"
+                  required
+                >
+                  <option value="volunteer">Volunteer</option>
+                  <option value="donate">Donate</option>
+                  <option value="partner">Partner</option>
+                </select>
+              </div>
+
+              <div className="mb-4">
+                <label
+                  htmlFor="location"
+                  className="block text-sm font-semibold"
+                >
+                  Location*
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  className="w-full mt-2 p-2 border border-gray-300 rounded"
+                  required
+                />
+              </div>
+              
+
+              <div className="mb-4">
+                <label
+                  htmlFor="eventImage"
+                  className="block text-sm font-semibold"
+                >
+                  Event Image*
+                </label>
+                <input
+                  type="file"
+                  id="eventImage"
+                  className="w-full mt-2 p-2 border border-gray-300 rounded"
+                  accept="image/*"
+                  required
+                />
+              </div>
+              
+             
               <div className="mb-4">
                 <label
                   htmlFor="description"
@@ -152,21 +244,21 @@ const ContactForm = () => {
                 </label>
                 <textarea
                   id="description"
-                  className="w-full mt-2 p-2 border border-gray-300 rounded h-24"
+                  className="w-full mt-2 p-2 border border-gray-300 rounded"
+                  rows="4"
                   required
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800"
+                className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600"
               >
-                Send
+                Submit
               </button>
             </form>
           </div>
         </div>
       </div>
-      
     </div>
   );
 };

@@ -14,29 +14,6 @@ const AboutUs = () => {
         About Us
       </h2>
 
-<<<<<<< HEAD
-      {/* Background Shape */}
-      <div className="hidden lg:block absolute left-[-200px] top-[50px] w-[400px] h-[500px] bg-[#c1f3bf] rounded-full opacity-50"></div>
-
-      {/* Card Container */}
-      <div className="relative flex  justify-center max-w-full mx-auto  space-y-16 lg:space-y-0 lg:space-x-2 px-4 lg:px-0">
-        {/* First Card */}
-        <div className="relative flex flex-col items-center text-center">
-          <div className="relative w-36 h-36 mb-6">
-            <img
-              src={img1}
-              alt="Donation Box"
-              className="absolute rounded-full top-[30px] left-[10px] object-cover shadow-md"
-            />
-          </div>
-          <div className="bg-[#7dcbfc] text0 rounded-tr-[56px] rounded-bl-[56px] px-10 py-10 text-xs h-[296px] w-[210px] hover:scale-200 hover:shadow-2xl ">
-            <p className="text-gray-800 text-sm mb-4">
-              We are dedicated to fostering empathy, compassion, and respect in
-              our interactions with clients, colleagues, and the community at
-              large.
-            </p>
-            <h3 className="font-bold text-base text-[#f2fcf1]">Uphold a sense of humanity</h3>
-=======
       <div className="container mx-auto py-12">
         {/* Mission and Vision Section */}
         <div className="grid rounded-xl px-6 sm:px-10 sm:pt-12 grid-cols-1 md:grid-cols-2 gap-8 my-10">
@@ -59,7 +36,6 @@ const AboutUs = () => {
               alt="Mission Image"
               className="w-full max-w-xs sm:max-w-md rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
             />
->>>>>>> 29eddedb1b59d31a71349ab4c2ff674ba46826ab
           </div>
         </div>
 
@@ -72,34 +48,6 @@ const AboutUs = () => {
               className="w-full max-w-xs sm:max-w-md rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
             />
           </div>
-<<<<<<< HEAD
-          <div className="bg-[#7dcbfc] rounded-tr-[56px] rounded-bl-[56px] px-10 py-10 text-xs h-[296px] w-[210px] shadow-lg  hover:scale-200 hover:shadow-2xl">
-            <p className="text-gray-800 mb-4">
-              We are dedicated to fostering empathy, compassion, and respect in
-              our interactions with clients, colleagues, and the community at
-              large.
-            </p>
-            <h3 className="font-bold text-base text-[#f2fcf1]">Encouraging young minds</h3>
-          </div>
-        </div>
-
-        {/* Third Card */}
-        <div className="relative flex flex-col items-center text-center lg:left-[200px] top-16">
-          <div className="relative w-36 h-36 mb-6">
-            <img
-              src={img1}
-              alt="Donation Box"
-              className="absolute rounded-full top-[30px] left-[-50px] object-cover shadow-md"
-            />
-          </div>
-          <div className="bg-[#7dcbfc] rounded-tr-[56px] rounded-bl-[56px] px-10 py-10 text-xs h-[296px] w-[210px] shadow-lg  hover:scale-200 hover:shadow-2xl">
-            <p className="text-gray-800 mb-4">
-              We are dedicated to fostering empathy, compassion, and respect in
-              our interactions with clients, colleagues, and the community at
-              large.
-            </p>
-            <h3 className="font-bold text-base text-[#f2fcf1]">Environmental Care</h3>
-=======
 
           {/* Vision Text */}
           <div className="text-center rounded-xl bg-green-100 pr-6 sm:pr-32 pl-6 sm:pl-10 py-6 md:text-left">
@@ -110,29 +58,10 @@ const AboutUs = () => {
               A future where every individual feels empowered to make a positive
               impact through volunteerism and acts of kindness.
             </p>
->>>>>>> 29eddedb1b59d31a71349ab4c2ff674ba46826ab
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-        {/* Fourth Card */}
-        <div className="relative flex flex-col items-center text-center lg:left-[300px] ">
-          <div className="relative w-36 h-36 mb-6">
-            <img
-              src={img1}
-              alt="Donation Box"
-              className="absolute rounded-full top-[-20px] left-[10px] object-cover shadow-md"
-            />
-          </div>
-          <div className="bg-[#7dcbfc] rounded-tr-[56px] rounded-bl-[56px] px-10 py-10 text-xs h-[296px] w-[210px] shadow-lg  hover:scale-200 hover:shadow-2xl">
-            <p className="text-gray-00 mb-4">
-              We are dedicated to fostering empathy, compassion, and respect in
-              our interactions with clients, colleagues, and the community at
-              large.
-            </p>
-            <h3 className="font-bold text-base text-[#f2fcf1]">Fostering Growth</h3>
-=======
       {/* Core Values Cards */}
       <div className="relative flex flex-wrap justify-center gap-16 mx-auto space-y-12 lg:space-y-0 lg:space-x-8 px-4 lg:px-0 mt-12">
         {[
@@ -169,7 +98,6 @@ const AboutUs = () => {
               <p className="text-gray-600 mb-4">{value.desc}</p>
               <h3 className="font-bold text-gray-800">{value.title}</h3>
             </div>
->>>>>>> 29eddedb1b59d31a71349ab4c2ff674ba46826ab
           </div>
         ))}
       </div>

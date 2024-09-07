@@ -89,14 +89,11 @@ const ContactForm = () => {
           </div>
 
           <div className="w-full lg:w-2/3">
-<<<<<<< HEAD
-=======
             <h2 className="text-xl lg:text-2xl font-bold mb-4">Send Message</h2>
             <p className="mb-4">
               Have a question or need assistance? Send us a message, and we'll
               get back to you as soon as possible.
             </p>
->>>>>>> 29eddedb1b59d31a71349ab4c2ff674ba46826ab
             <form>
               <div className="mb-4">
                 <label
@@ -167,10 +164,6 @@ const ContactForm = () => {
               </button>
             </form>
           </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 29eddedb1b59d31a71349ab4c2ff674ba46826ab
         </div>
       </div>
       

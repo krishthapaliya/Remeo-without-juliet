@@ -6,10 +6,12 @@ const cors = require("cors");
 
 // Configure CORS to allow requests from specific origins
 const corsOptions = {
-  origin: "http://localhost:5173/",
+  origin: "http://localhost:5173",
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type"],
 };
+// Apply CORS middleware
+app.use(cors(corsOptions));
 
 //json parse
 app.use(express.json());

@@ -84,7 +84,7 @@ exports.deleteEvent = async (req, res) => {
     });
   }
 };
-
+//getallevent
 exports.getEvent = async (req, res) => {
   try {
     const getAllEvent = await eventSchema.find();

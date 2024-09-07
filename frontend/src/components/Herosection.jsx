@@ -10,15 +10,15 @@ const Herosection = () => {
     <div className="flex flex-col items-center">
     <div className="max-w-5xl text-center mb-8">
       <p className="text-5xl  font-semibold text-gray-800">
-        "Your <span className="text-pink-600">talent</span> can shape{" "}<br/>
-        <span className="text-pink-600">tomorrow</span>—come be part of a{" "}<br/>
-        <span className="text-pink-600">team</span> where{" "}<br/>
-        <span className="text-pink-600">creativity</span> knows no bounds."
+        "Your <span className="text-[#30ba2d]">talent</span> can shape{" "}<br/>
+        <span className="text-[#30ba2d]">tomorrow</span>—come be part of a{" "}<br/>
+        <span className="text-[#30ba2d]">team</span> where{" "}<br/>
+        <span className="text-[#30ba2d]">creativity</span> knows no bounds."
       </p>
     </div>
 
     <div className="mt-10">
-      <button className="px-8  py-3 text-white bg-pink-600 rounded-full shadow-md hover:bg-pink-700 transition">
+      <button className="px-8  py-3 text-white bg-[#30ba2d] rounded-full shadow-md hover:bg-[#1d791c] transition">
         Join Us →
       </button>
     </div>

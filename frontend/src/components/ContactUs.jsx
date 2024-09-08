@@ -56,9 +56,9 @@ const ContactForm = () => {
     <div className="mx-24">
       {/* "Contact Us" section with gradient and background image */}
       <div
-        className="p-8 text-white flex justify-center items-center h-96 relative"
+        className="p-8 text-white flex justify-center items-center h-96 relative "
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(128, 90, 213, 0.8), rgba(128, 90, 213, 0.5)), url(${backgroundImage})`,
+          backgroundImage: `linear-gradient(to right, rgba(128, 90, 110, 0.8), rgba(128, 90, 21, 0.5)) , url(${backgroundImage})`,
           backgroundSize: "contain",
           backgroundPosition: "center",
         }}

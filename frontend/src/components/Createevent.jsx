@@ -65,15 +65,16 @@ const CreateEvent = () => {
   };
 
   return (
-    <div className="mx-24">
-      <h1 className="text-center text-3xl font-extrabold p-8">Create Events</h1>
+    <div className="w-full flex justify-center pt-4 pb-4">
+     
       <form
-        className="mx-24 p-20 rounded-3xl bg-slate-200"
+        className=" rounded-3xl p-5 bg-[#e0f0fe] w-[50%]"
         onSubmit={handleSubmit}
       >
+         <h1 className="text-center text-3xl font-bold p-3  rounded-xl mb-6 text-gray-500">Create Events</h1>
         {/* Existing Fields */}
         <div className="mb-4">
-          <label htmlFor="title" className="block text-lg font-semibold">
+          <label htmlFor="title" className="block text-lg font-semibold text-gray-700">
             Event Name<span className="text-red-600"> *</span>
           </label>
           <input
@@ -82,12 +83,12 @@ const CreateEvent = () => {
             name="title"
             value={formData.title}
             onChange={handleChange}
-            className="w-full mt-2 p-2 border border-gray-300 rounded-xl outline-none"
+            className="  mt-2 p-2 border border-gray-300 rounded-xl outline-none w-1/3 "
             required
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="location" className="block text-lg font-semibold">
+          <label htmlFor="location" className="block text-lg font-semibold text-gray-700">
             Event Location <span className="text-red-600"> *</span>
           </label>
           <input
@@ -96,13 +97,13 @@ const CreateEvent = () => {
             name="location"
             value={formData.location}
             onChange={handleChange}
-            className="w-full mt-2 p-2 border border-gray-300 rounded-xl outline-none"
+            className="  mt-2 p-2 border border-gray-300 rounded-xl outline-none w-1/3"
             required
           />
         </div>
 
         <div className="mb-4">
-          <label htmlFor="startDate" className="block text-lg font-semibold">
+          <label htmlFor="startDate" className="block text-lg font-semibold text-gray-700">
             Start Date <span className="text-red-600"> *</span>
           </label>
           <input
@@ -111,13 +112,13 @@ const CreateEvent = () => {
             name="startDate"
             value={formData.startDate}
             onChange={handleChange}
-            className="w-full mt-2 p-2 border border-gray-300 rounded-xl"
+            className=" mt-2 p-2 border border-gray-300 rounded-xl w-1/3"
             required
           />
         </div>
 
         <div className="mb-4">
-          <label htmlFor="duration" className="block text-lg font-semibold">
+          <label htmlFor="duration" className="block text-lg font-semibold text-gray-700">
             Deadline date <span className="text-red-600"> *</span>
           </label>
           <input
@@ -126,7 +127,7 @@ const CreateEvent = () => {
             name="deadlineDate"
             value={formData.deadlineDate}
             onChange={handleChange}
-            className="w-full mt-2 p-2 border border-gray-300 rounded-xl"
+            className=" mt-2 p-2 border border-gray-300 rounded-xl w-1/3"
             placeholder="e.g., 2 hours, 1 day"
             required
           />
@@ -135,22 +136,29 @@ const CreateEvent = () => {
         {/* New Fields for Action Data and Event Image */}
 
         <div className="mb-4">
-          <label htmlFor="eventImage" className="block text-lg font-semibold">
+          <label htmlFor="eventImage" className="block text-lg font-semibold text-gray-700">
             Event Image <span className="text-red-600"> *</span>
           </label>
+
           <input
             type="file"
             id="image"
             name="image" // Ensure this name is consistent
-            className="w-full mt-2 p-2 border border-gray-300 rounded-xl"
+            className="hidden"
             accept="image/*"
             onChange={handleFileChange}
             required
           />
+          <label 
+          htmlFor="image"
+          className="mt-2 p-2 border border-gray-300 rounded-xl inline-block px-4 py-2 bg-blue-500 text-white font-semibold  cursor-pointer"
+          > Upload Image 
+          </label>
         </div>
 
         <div className="mb-4">
-          <label htmlFor="description" className="block text-lg font-semibold">
+          <label htmlFor="description
+          " className="block text-lg h-32px font-semibold text-gray-700">
             Description <span className="text-red-600"> *</span>
           </label>
           <textarea
@@ -158,14 +166,15 @@ const CreateEvent = () => {
             name="description"
             value={formData.description}
             onChange={handleChange}
-            className="w-full mt-2 p-2 border border-gray-300 rounded-xl"
+            className="  mt-2 p-2 border border-gray-300 rounded-xl w-3/4 outline-none"
             rows="4"
+            
             required
           ></textarea>
         </div>
         <button
           type="submit"
-          className="bg-blue-500 text-white px-6 m-6 py-2 rounded hover:bg-blue-600"
+          className="bg-blue-500 text-white px-6 m-6 py-2 font-semibold rounded-xl hover:bg-blue-600"
         >
           Submit
         </button>

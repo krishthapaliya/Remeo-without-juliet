@@ -6,34 +6,34 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="flex items-center justify-between bg-[#01aeee] text-black px-20  ">
+    <div className="flex items-center justify-between bg-[#01aeee] h-16 overflow-hidden text-black px-20  ">
       <div className="flex items-center">
         <Link to="/">
-          <img src={logo} alt="logo" className="h-14 md:h-28" />
+          <img src={logo} alt="logo" className="h-14 md:h-32" />
         </Link>
       </div>
       <div className="hidden md:flex space-x-16">
         <Link
           to="/"
-          className="hover:bg-[#06D001] hover:text-white transition-colors  px-2 py-1 rounded-full text-base font-semibold text-white"
+          className="hover:bg-[#06D001] hover:text-white transition-colors  px-2  rounded-full text-base font-semibold text-white"
         >
           HOME
         </Link>
         <Link
           to="/aboutus"
-          className="hover:bg-[#06D001] hover:text-white transition-colors  px-2 py-1 rounded-full text-base font-semibold text-white"
+          className="hover:bg-[#06D001] hover:text-white transition-colors  px-2  rounded-full text-base font-semibold text-white"
         >
           ABOUT US
         </Link>
         <Link
           to="/event"
-          className="hover:bg-[#06D001] hover:text-white transition-colors  px-2 py-1 rounded-full text-base font-semibold text-white"
+          className="hover:bg-[#06D001] hover:text-white transition-colors  px-2  rounded-full text-base font-semibold text-white"
         >
           EVENT LIST
         </Link>
         <Link
           to="/contactus"
-          className="hover:bg-[#06D001] hover:text-white transition-colors  px-2 py-1 rounded-full text-base font-semibold text-white"
+          className="hover:bg-[#06D001] hover:text-white transition-colors  px-2  rounded-full text-base font-semibold text-white"
         >
           CONTACT US
         </Link>

@@ -38,6 +38,7 @@ const RegistrationPage = () => {
           },
         }
       );
+      console.log("response", response);
       notifySuccess();
 
       // console.log(JSON.stringify(response.data.data));
@@ -50,7 +51,7 @@ const RegistrationPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-100 to-blue-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl w-full space-y-8 bg-white p-8 rounded-xl shadow-lg">
-        <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-6">
+        <h2 className="text-3xl font-bold text-center text-gray-500 mb-6">
           Volunteer Registration
         </h2>
 
@@ -65,8 +66,8 @@ const RegistrationPage = () => {
               name="firstName"
               value={formData.firstName}
               onChange={handleChange}
-              className="block w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500 focus:outline-none transition duration-200"
-              placeholder="John"
+              className="block w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-lg shadow-sm focus:outline-none transition duration-200"
+              placeholder="Enter your FirstName"
               required
             />
           </div>
@@ -81,8 +82,8 @@ const RegistrationPage = () => {
               name="lastName"
               value={formData.lastName}
               onChange={handleChange}
-              className="block w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500 focus:outline-none transition duration-200"
-              placeholder="Doe"
+              className="block w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-lg shadow-sm focus:outline-none transition duration-200"
+              placeholder="Enter your LastName"
               required
             />
           </div>
@@ -95,8 +96,8 @@ const RegistrationPage = () => {
               name="contactNumber"
               value={formData.contactNumber}
               onChange={handleChange}
-              className="block w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500 focus:outline-none transition duration-200"
-              placeholder="+1 123 456 7890"
+              className="block w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-lg shadow-sm focus:outline-none transition duration-200"
+              placeholder="Enter your phone number"
               required
             />
           </div>
@@ -110,13 +111,11 @@ const RegistrationPage = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="block w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500 focus:outline-none transition duration-200"
-              placeholder="john.doe@example.com"
+              className="block w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-lg shadow-sm focus:outline-none transition duration-200"
+              placeholder="Enter your email"
               required
             />
           </div>
-
-          {/* Phone */}
 
           <div className="relative">
             <label className="block text-sm font-semibold text-gray-600 mb-2">
@@ -127,8 +126,8 @@ const RegistrationPage = () => {
               name="password"
               value={formData.password}
               onChange={handleChange}
-              className="block w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500 focus:outline-none transition duration-200"
-              placeholder="+1 123 456 7890"
+              className="block w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-lg shadow-sm focus:outline-none transition duration-200"
+              placeholder="Enter your password "
               required
             />
           </div>
@@ -142,7 +141,7 @@ const RegistrationPage = () => {
               name="participationType"
               value={formData.participationType}
               onChange={handleChange}
-              className="block w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500 focus:outline-none transition duration-200"
+              className="block w-full px-4 py-2 text-gray-800 border border-gray-300 rounded-lg shadow-sm focus:outline-none transition duration-200"
             >
               <option value="volunteer">Volunter</option>
               <option value="attendee">Attendes</option>
@@ -153,7 +152,8 @@ const RegistrationPage = () => {
           <div className="text-center">
             <button
               type="submit"
-              className="w-full px-6 py-3 bg-gradient-to-r from-pink-500 to-pink-700 text-white rounded-lg shadow-md hover:from-pink-600 hover:to-pink-800 focus:outline-none focus:ring-4 focus:ring-pink-300 transition-transform transform hover:scale-105"
+              className="w-full px-6 py-3   text-white rounded-lg shadow-md   
+              transition-transform transform hover:scale-105 bg-blue-500"
             >
               Submit Registration
             </button>

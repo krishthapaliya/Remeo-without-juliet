@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import backgroundImage from "../assets/bgimg.jpg"; // Adjust the path as needed
 
 const ContactForm = () => {
@@ -43,12 +45,12 @@ const ContactForm = () => {
     emailjs
       .send(serviceID, templateID, formDataToSend, publicKey)
       .then((response) => {
-        console.log("SUCCESS!", response.status, response.text);
-        alert("Your message has been sent!");
+        // console.log("SUCCESS!", response.status, response.text);
+        toast.success("Your message has been sent!");
       })
       .catch((error) => {
-        console.error("FAILED...", error);
-        alert("Failed to send the message.");
+        // console.error("FAILED...", error);
+        toast.error("Failed to send the message.");
       });
   };
 
@@ -68,7 +70,6 @@ const ContactForm = () => {
           <p className="text-lg">Let’s Start a Conversation</p>
         </div>
       </div>
-
       {/* Contact Form Section */}
       <div className="bg-[F0F8FF] py-8 lg:py-12 xl:py-16 px-4 lg:px-8 xl:px-16 rounded-md shadow-md">
         <div className="flex flex-col lg:flex-row justify-between">
@@ -80,7 +81,12 @@ const ContactForm = () => {
             <div className="space-y-4">
               <div className="flex items-center">
                 <div className="bg-black text-white p-2 rounded-full">
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
                     <path d="M3 10h1m8-8h.01M13 4h3.586a1 1 0 01.707.293l2.414 2.414a1 1 0 01.293.707V9m0 4v6a2 2 0 01-2 2h-7a2 2 0 01-2-2v-6m0-4v-.5a2.5 2.5 0 015 0V9m5 0h2a2 2 0 012 2v2a2 2 0 01-2 2h-2m0-4h-2m-6 8h4" />
                   </svg>
                 </div>
@@ -88,7 +94,12 @@ const ContactForm = () => {
               </div>
               <div className="flex items-center">
                 <div className="bg-black text-white p-2 rounded-full">
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
                     <path d="M16 12h6m-6 4h6m-6-8h6M8 7v10m-4 0h4a2 2 0 002-2V9a2 2 0 00-2-2H4a2 2 0 00-2 2v6a2 2 0 002 2h4z" />
                   </svg>
                 </div>
@@ -127,7 +138,12 @@ const ContactForm = () => {
             <form onSubmit={handleSubmit}>
               {/* Input fields */}
               <div className="mb-4">
-                <label htmlFor="orgName" className="block text-sm font-semibold">Organization Name*</label>
+                <label
+                  htmlFor="orgName"
+                  className="block text-sm font-semibold"
+                >
+                  Organization Name*
+                </label>
                 <input
                   type="text"
                   id="orgName"
@@ -139,7 +155,9 @@ const ContactForm = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="email" className="block text-sm font-semibold">Organization Email*</label>
+                <label htmlFor="email" className="block text-sm font-semibold">
+                  Organization Email*
+                </label>
                 <input
                   type="email"
                   id="email"
@@ -151,7 +169,9 @@ const ContactForm = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="phone" className="block text-sm font-semibold">Organization Contact</label>
+                <label htmlFor="phone" className="block text-sm font-semibold">
+                  Organization Contact
+                </label>
                 <input
                   type="text"
                   id="phone"
@@ -162,7 +182,9 @@ const ContactForm = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="url" className="block text-sm font-semibold">Organization URL</label>
+                <label htmlFor="url" className="block text-sm font-semibold">
+                  Organization URL
+                </label>
                 <input
                   type="text"
                   id="url"
@@ -173,7 +195,12 @@ const ContactForm = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="startDate" className="block text-sm font-semibold">Start Date*</label>
+                <label
+                  htmlFor="startDate"
+                  className="block text-sm font-semibold"
+                >
+                  Start Date*
+                </label>
                 <input
                   type="date"
                   id="startDate"
@@ -185,7 +212,12 @@ const ContactForm = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="duration" className="block text-sm font-semibold">Duration*</label>
+                <label
+                  htmlFor="duration"
+                  className="block text-sm font-semibold"
+                >
+                  Duration*
+                </label>
                 <input
                   type="text"
                   id="duration"
@@ -198,7 +230,9 @@ const ContactForm = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="action" className="block text-sm font-semibold">Action Data*</label>
+                <label htmlFor="action" className="block text-sm font-semibold">
+                  Action Data*
+                </label>
                 <select
                   id="action"
                   name="action"
@@ -213,7 +247,12 @@ const ContactForm = () => {
                 </select>
               </div>
               <div className="mb-4">
-                <label htmlFor="location" className="block text-sm font-semibold">Location*</label>
+                <label
+                  htmlFor="location"
+                  className="block text-sm font-semibold"
+                >
+                  Location*
+                </label>
                 <input
                   type="text"
                   id="location"
@@ -225,7 +264,12 @@ const ContactForm = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="eventImage" className="block text-sm font-semibold">Event Image*</label>
+                <label
+                  htmlFor="eventImage"
+                  className="block text-sm font-semibold"
+                >
+                  Event Image*
+                </label>
                 <input
                   type="file"
                   id="eventImage"
@@ -237,7 +281,12 @@ const ContactForm = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="description" className="block text-sm font-semibold">Description*</label>
+                <label
+                  htmlFor="description"
+                  className="block text-sm font-semibold"
+                >
+                  Description*
+                </label>
                 <textarea
                   id="description"
                   name="description"
@@ -257,7 +306,8 @@ const ContactForm = () => {
             </form>
           </div>
         </div>
-      </div>
+      </div>{" "}
+      <ToastContainer />
     </div>
   );
 };

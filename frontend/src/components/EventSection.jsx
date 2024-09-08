@@ -40,13 +40,13 @@ const EventSection = () => {
 
   return (
     <div className="w-full flex justify-center my-[5%]">
-      <div className="flex flex-col w-[80%] bg-gray-100 shadow-md p-5">
-        <div className="flex gap-5">
+      <div className="flex flex-col w-[60%] bg-gray-100 shadow-md p-5 gap-3">
+        <div className="flex items-center">
           <div className="w-[300px] h-300px] ">
             <img src={eventData?.eventImage} alt="" className="rounded-md" />{" "}
           </div>
           <div className="p-6">
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-xl font-bold text-gray-800 mb-2 capitalize">
               {eventData?.eventTitle}
             </h3>
             <p className="text-gray-600 ">
@@ -57,7 +57,7 @@ const EventSection = () => {
           </div>
         </div>
         <div>{eventData?.eventDescription}</div>
-        <div>
+        <div className="p-4">
           <Link
             to="/register"
             className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg"

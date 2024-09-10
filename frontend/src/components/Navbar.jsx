@@ -6,7 +6,10 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="flex items-center justify-between bg-[#01aeee] h-16 overflow-hidden text-black px-20  ">
+    <div
+      className="flex items-center justify-between bg-[#01aeee] h-16 overflow-hidden text-black md
+    md:px-20 px-3 "
+    >
       <div className="flex items-center">
         <Link to="/">
           <img src={logo} alt="logo" className="h-14 md:h-32" />
@@ -15,41 +18,41 @@ const Navbar = () => {
       <div className="hidden md:flex space-x-16">
         <Link
           to="/"
-          className="hover:bg-[#06D001] hover:text-white transition-colors  px-2  rounded-full text-base font-semibold text-white"
+          className="hover:bg-[white] hover:text-blue-500 transition-colors  px-2  rounded-full text-base font-semibold text-white"
         >
           HOME
         </Link>
         <Link
           to="/aboutus"
-          className="hover:bg-[#06D001] hover:text-white transition-colors  px-2  rounded-full text-base font-semibold text-white"
+          className="hover:bg-[white] hover:text-blue-500 transition-colors  px-2  rounded-full text-base font-semibold text-white"
         >
           ABOUT US
         </Link>
         <Link
           to="/event"
-          className="hover:bg-[#06D001] hover:text-white transition-colors  px-2  rounded-full text-base font-semibold text-white"
+          className="hover:bg-[white] hover:text-blue-500 transition-colors  px-2  rounded-full text-base font-semibold text-white"
         >
           EVENT LIST
         </Link>
         <Link
           to="/contactus"
-          className="hover:bg-[#06D001] hover:text-white transition-colors  px-2  rounded-full text-base font-semibold text-white"
+          className="hover:bg-[white] hover:text-blue-500 transition-colors  px-2  rounded-full text-base font-semibold text-white"
         >
           CONTACT US
         </Link>
       </div>
       <div className="md:hidden">
         <button
-          className="text-2xl focus:outline-none"
+          className="text-2xl focus:outline-none text-white"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           ☰
         </button>
       </div>
       {isMobileMenuOpen && (
-        <div className="fixed top-0 right-0 w-64 h-full bg-gray-800 text-white p-4 md:hidden">
+        <div className="fixed top-0 right-0 w-64 h-full bg-gray-800 text-white p-4 md:hidden z-[1]">
           <button
-            className="text-2xl absolute top-4 right-4"
+            className="text-2xl absolute top-4 right-4 text-white"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             ✕

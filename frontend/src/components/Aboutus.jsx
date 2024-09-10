@@ -10,51 +10,53 @@ const AboutUs = () => {
   return (
     <div className="relative bg-blue-50 pb-16 px-6 md:px-12 lg:px-24 p-10">
       {/* Main Title */}
-     
 
       <div className="container mx-auto py-12">
-      <h2 className="text-4xl lg:text-5xl text-center font-semibold text-[#0bbcfe] mb-10">
-        About Us
-      </h2>
-      {/* Core Values Cards */}
-      <div className="relative flex flex-wrap justify-center gap-16 mx-auto space-y-12 lg:space-y-0 lg:space-x-8 px-4 lg:px-0 mt-12">
-        {[
-          {
-            img: img1,
-            title: "Uphold a Sense of Humanity",
-            desc: "We are dedicated to fostering empathy, compassion, and respect in our interactions with clients, colleagues, and the community at large."
-          },
-          {
-            img: img2,
-            title: "Encouraging Young Minds",
-            desc: "We encourage the growth of young minds, empowering the next generation to step up and make a difference."
-          },
-          {
-            img: img3,
-            title: "Environmental Care",
-            desc: "We focus on environmental care and sustainability as key values in our mission."
-          },
-          {
-            img: img4,
-            title: "Fostering Growth",
-            desc: "We provide resources and opportunities for individuals to grow personally and professionally through volunteerism."
-          }
-        ].map((value, index) => (
-          <div key={index} className="relative flex flex-col items-center text-center">
-            <div className="relative w-36 h-36 mb-6">
-              <img
-                src={value.img}
-                alt={`${value.title} Image`}
-                className="absolute rounded-full top-[110px] left-1 transform -translate-x-1/2 -translate-y-1/2 object-cover shadow-lg"
-              />
+        <h2 className="text-4xl lg:text-5xl text-center font-semibold text-[#0bbcfe] mb-10">
+          About Us
+        </h2>
+        {/* Core Values Cards */}
+        <div className="relative flex flex-wrap justify-center gap-16 mx-auto space-y-12 lg:space-y-0 lg:space-x-8 px-4 lg:px-0 mt-12">
+          {[
+            {
+              img: img1,
+              title: "Uphold a Sense of Humanity",
+              desc: "We are dedicated to fostering empathy, compassion, and respect in our interactions with clients, colleagues, and the community at large.",
+            },
+            {
+              img: img2,
+              title: "Encouraging Young Minds",
+              desc: "We encourage the growth of young minds, empowering the next generation to step up and make a difference.",
+            },
+            {
+              img: img3,
+              title: "Environmental Care",
+              desc: "We focus on environmental care and sustainability as key values in our mission.",
+            },
+            {
+              img: img4,
+              title: "Fostering Growth",
+              desc: "We provide resources and opportunities for individuals to grow personally and professionally through volunteerism.",
+            },
+          ].map((value, index) => (
+            <div
+              key={index}
+              className="relative flex flex-col items-center text-center"
+            >
+              <div className="relative w-36 h-36 mb-6">
+                <img
+                  src={value.img}
+                  alt={`${value.title} Image`}
+                  className="absolute rounded-full top-[110px] left-1 transform -translate-x-1/2 -translate-y-1/2 object-cover shadow-lg"
+                />
+              </div>
+              <div className="bg-[#019bd5] rounded-tr-[56px] rounded-bl-[56px] px-10 py-10 text-sm h-[296px] w-[210px] shadow-xl border border-[#01e9ee] hover:shadow-2xl transition-shadow duration-300">
+                <p className="text-white mb-4">{value.desc}</p>
+                <h3 className="font-bold text-white">{value.title}</h3>
+              </div>
             </div>
-            <div className="bg-[#019bd5] rounded-tr-[56px] rounded-bl-[56px] px-10 py-10 text-sm h-[296px] w-[210px] shadow-xl border border-[#01e9ee] hover:shadow-2xl transition-shadow duration-300">
-              <p className="text-white mb-4">{value.desc}</p>
-              <h3 className="font-bold text-white">{value.title}</h3>
-            </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
         {/* Mission and Vision Section */}
         <div className="grid rounded-xl px-6 sm:px-10 sm:pt-12 grid-cols-1 md:grid-cols-2 gap-8 my-10">
           {/* Mission Section */}
@@ -101,7 +103,6 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-     
 
       {/* Testimonials */}
       <div className="mt-12 bg-white py-8 px-4 mx-20 rounded-lg shadow-xl border border-gray-300">
@@ -113,17 +114,19 @@ const AboutUs = () => {
             {
               quote:
                 "Volunteering here has changed my life. It's rewarding to know I can make a real difference!",
-              name: "John Doe"
+              name: "John Doe",
             },
             {
               quote:
                 "A wonderful place filled with passion and kindness. I'm so grateful to be part of this team.",
-              name: "Jane Smith"
-            }
+              name: "Jane Smith",
+            },
           ].map((testimonial, index) => (
             <div key={index} className="mb-6 lg:mb-0">
               <p className="text-gray-600 italic">"{testimonial.quote}"</p>
-              <p className="font-bold mt-4 text-green-600">- {testimonial.name}</p>
+              <p className="font-bold mt-4 text-green-600">
+                - {testimonial.name}
+              </p>
             </div>
           ))}
         </div>
@@ -136,10 +139,12 @@ const AboutUs = () => {
           {[
             { stat: "500+", desc: "Volunteers Engaged" },
             { stat: "1000+", desc: "Hours Contributed" },
-            { stat: "250+", desc: "Events Organized" }
+            { stat: "250+", desc: "Events Organized" },
           ].map((impact, index) => (
             <div key={index}>
-              <h4 className="text-2xl font-bold text-green-600">{impact.stat}</h4>
+              <h4 className="text-2xl font-bold text-green-600">
+                {impact.stat}
+              </h4>
               <p className="text-gray-600">{impact.desc}</p>
             </div>
           ))}
@@ -156,7 +161,7 @@ const AboutUs = () => {
           create a better tomorrow.
         </p>
         <a
-          href="/register"
+          href="/event"
           className="bg-green-600 text-white px-6 py-3 rounded-full mt-6 inline-block hover:bg-green-700 transition"
         >
           Sign Up Now

@@ -66,15 +66,19 @@ const CreateEvent = () => {
 
   return (
     <div className="w-full flex justify-center pt-4 pb-4">
-     
       <form
-        className=" rounded-3xl p-5 bg-[#e0f0fe] w-[50%]"
+        className=" rounded-3xl p-5 bg-white shadow-2xl w-[50%]"
         onSubmit={handleSubmit}
       >
-         <h1 className="text-center text-3xl font-bold p-3  rounded-xl mb-6 text-gray-500">Create Events</h1>
+        <h1 className="text-center text-3xl font-semibold p-3  rounded-xl mb-6 text-gray-500">
+          Create Events
+        </h1>
         {/* Existing Fields */}
         <div className="mb-4">
-          <label htmlFor="title" className="block text-lg font-semibold text-gray-700">
+          <label
+            htmlFor="title"
+            className="block text-base font-semibold text-gray-600 mb-2"
+          >
             Event Name<span className="text-red-600"> *</span>
           </label>
           <input
@@ -88,7 +92,10 @@ const CreateEvent = () => {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="location" className="block text-lg font-semibold text-gray-700">
+          <label
+            htmlFor="location"
+            className="block  text-base font-semibold text-gray-600 mb-2"
+          >
             Event Location <span className="text-red-600"> *</span>
           </label>
           <input
@@ -103,7 +110,10 @@ const CreateEvent = () => {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="startDate" className="block text-lg font-semibold text-gray-700">
+          <label
+            htmlFor="startDate"
+            className="block  text-base font-semibold text-gray-600 mb-2"
+          >
             Start Date <span className="text-red-600"> *</span>
           </label>
           <input
@@ -118,7 +128,10 @@ const CreateEvent = () => {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="duration" className="block text-lg font-semibold text-gray-700">
+          <label
+            htmlFor="duration"
+            className="block  text-base font-semibold text-gray-600 mb-2"
+          >
             Deadline date <span className="text-red-600"> *</span>
           </label>
           <input
@@ -136,7 +149,10 @@ const CreateEvent = () => {
         {/* New Fields for Action Data and Event Image */}
 
         <div className="mb-4">
-          <label htmlFor="eventImage" className="block text-lg font-semibold text-gray-700">
+          <label
+            htmlFor="eventImage"
+            className="block  text-base font-semibold text-gray-600 mb-2"
+          >
             Event Image <span className="text-red-600"> *</span>
           </label>
 
@@ -149,16 +165,21 @@ const CreateEvent = () => {
             onChange={handleFileChange}
             required
           />
-          <label 
-          htmlFor="image"
-          className="mt-2 p-2 border border-gray-300 rounded-xl inline-block px-4 py-2 bg-blue-500 text-white font-semibold  cursor-pointer"
-          > Upload Image 
+          <label
+            htmlFor="image"
+            className="mt-2 p-2 border border-gray-300 rounded-xl inline-block px-4 py-2 bg-blue-500 text-white font-semibold  cursor-pointer"
+          >
+            {" "}
+            Upload Image
           </label>
         </div>
 
         <div className="mb-4">
-          <label htmlFor="description
-          " className="block text-lg h-32px font-semibold text-gray-700">
+          <label
+            htmlFor="description
+          "
+            className="block text-base text-gray-500 h-32px font-semibold "
+          >
             Description <span className="text-red-600"> *</span>
           </label>
           <textarea
@@ -168,16 +189,17 @@ const CreateEvent = () => {
             onChange={handleChange}
             className="  mt-2 p-2 border border-gray-300 rounded-xl w-3/4 outline-none"
             rows="4"
-            
             required
           ></textarea>
         </div>
-        <button
-          type="submit"
-          className="bg-blue-500 text-white px-6 m-6 py-2 font-semibold rounded-xl hover:bg-blue-600"
-        >
-          Submit
-        </button>
+        <span className="w-full flex justify-center">
+          <button
+            type="submit"
+            className="bg-blue-500 text-white px-6 m-6 py-2 font-semibold rounded-xl hover:bg-blue-600 w-[60%]"
+          >
+            Submit
+          </button>
+        </span>
       </form>
       <ToastContainer />
     </div>

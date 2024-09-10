@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import EventContext from "../context/EventContext";
+import { format } from "date-fns"; // Correct import for format
 
 const EventList = () => {
   const [date, setDate] = useState("");
@@ -77,6 +78,9 @@ const EventList = () => {
               alt="event-photo"
               className="rounded-lg mb-4 h-48 w-full object-cover"
             />
+
+            <p>{event?.eventLocation}</p>
+
             <h3 className="text-xl font-bold text-gray-800 mb-2 capitalize">
               {event.eventTitle}
             </h3>
